@@ -1,10 +1,103 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting": [
+    {
+      "target": "app-shell",
+      "public": "dist/apps/app-shell",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "catalog",
+      "public": "dist/apps/catalog",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|js|font.css|remoteEntry.js)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://ebuy-app-shell-f9762.web.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "checkout",
+      "public": "dist/apps/checkout",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|js|font.css|remoteEntry.js)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://ebuy-app-shell-f9762.web.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "recommendations",
+      "public": "dist/apps/recommendations",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|js|font.css|remoteEntry.js)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://ebuy-app-shell-f9762.web.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "store",
+      "public": "dist/apps/store",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|js|font.css|remoteEntry.js)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://ebuy-app-shell-f9762.web.app"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
