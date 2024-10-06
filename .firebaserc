@@ -1,0 +1,27 @@
+{
+  "projects": {
+    "default": "ebuy-5a876"
+  },
+  "targets": {
+    "ebuy-5a876": {
+      "hosting": {
+        "app-shell": [
+          "ebuy-app-shell-f9762"
+        ],
+        "catalog": [
+          "ebuy-catalog-5c0be"
+        ],
+        "checkout": [
+          "ebuy-checkout-74649"
+        ],
+        "recommendations": [
+          "ebuy-recommendations-1d602"
+        ],
+        "store": [
+          "ebuy-datastore-bdfa1"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
