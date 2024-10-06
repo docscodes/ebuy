@@ -85,6 +85,13 @@
         "jestConfig": "apps/catalog/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["firebase deploy --only hosting:catalog"],
+        "parallel": true
+      }
     }
   },
   "tags": []

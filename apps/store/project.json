@@ -93,6 +93,13 @@
           "buildTarget": "store:build:production"
         }
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["firebase deploy --only hosting:store"],
+        "parallel": true
+      }
     }
   },
   "tags": []

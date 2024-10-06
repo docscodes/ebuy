@@ -96,6 +96,13 @@
           "buildTarget": "app-shell:build:production"
         }
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["firebase deploy --only hosting:app-shell"],
+        "parallel": true
+      }
     }
   },
   "tags": []

@@ -6,9 +6,9 @@ import { Header } from '@ebuy/ui';
 import { Button } from 'semantic-ui-react';
 import useStore from 'store/Module';
 
+
 const Catalog = React.lazy(() => import('catalog/Module'));
 const Checkout = React.lazy(() => import('checkout/Module'));
-
 
 export function App() {
   const { count, increment } = useStore();
